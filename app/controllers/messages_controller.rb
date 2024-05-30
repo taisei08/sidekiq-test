@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    @message.save!
+    @message.save
     # 追加
     SampleJob.perform_later
   end
