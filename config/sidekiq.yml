@@ -5,4 +5,5 @@ production:
   :concurrency: 5
 :queues:
   - default
+  - [myqueue, 2]
 :daemon: true
