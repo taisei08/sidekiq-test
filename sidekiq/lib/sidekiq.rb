@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "sidekiq/version"
+require_relative 'sidekiq/version'
 
 module Sidekiq
   class Error < StandardError; end
