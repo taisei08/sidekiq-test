@@ -43,10 +43,12 @@ jobs:
         with:
           ruby-version: '3.3.1'
           bundler-cache: true
-
+      - name: set database.yml
+        run: cp -v config/database.ci.yml config/database.yml
+        
       - name: Database create
         run: bundle exec rails db:create RAILS_ENV=test
-
+        
       - name: Database migrate
         run: bundle exec rails db:migrate RAILS_ENV=test
 
